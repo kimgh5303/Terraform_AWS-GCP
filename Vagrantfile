@@ -10,7 +10,7 @@ SCRIPT
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/jammy64"
 #  config.vm.box_version = "20210603.0.0"
-  config.vm.network "private_network", ip: "192.168.56.200"
+  config.vm.network "private_network", ip: "192.168.56.100"
   config.vm.network "forwarded_port", guest: 22, host: 50000, auto_correct: true, id: "ssh"
   config.vm.provision "shell", inline: $ssh_config
   config.vm.provider "virtualbox" do |vb1|
